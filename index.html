@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Bajrang Editz - Edit • Design • Create</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #0b0f19;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: #3b82f6;
+            font-size: 22px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            color: #3b82f6;
+        }
+
+        .logo-subtitle {
+            font-size: 10px;
+            color: #94a3b8;
+            letter-spacing: 1.5px;
+            display: block;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1eb954;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 5% 50px 5%;
+            background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #0b0f19 70%);
+            gap: 25px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            line-height: 1.25;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            font-size: 12px;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.04);
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .feature-item i {
+            color: #3b82f6;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #334155;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .mockup-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 50px 5%;
+            background: #0b0f19;
+            text-align: center;
+        }
+
+        .section-tag {
+            color: #3b82f6;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            font-size: 13px;
+            margin-bottom: 35px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .service-card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            padding: 25px 18px;
+            border-radius: 12px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .icon-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .service-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        .know-more {
+            color: #3b82f6;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* --- PORTFOLIO SECTION --- */
+        .portfolio {
+            padding: 50px 5%;
+            background: #ffffff;
+            color: #0b0f19;
+            text-align: center;
+        }
+
+        .portfolio .section-subtitle {
+            color: #64748b;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .portfolio-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            background: #cbd5e1;
+            display: block;
+        }
+
+        .portfolio-info {
+            padding: 12px;
+        }
+
+        .portfolio-info h4 {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .portfolio-info p {
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        /* --- STATS & CTA BAR --- */
+        .stats-cta-bar {
+            background: #0f172a;
+            padding: 35px 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .stats-group {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stat-item i {
+            font-size: 24px;
+            color: #3b82f6;
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .cta-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255,255,255,0.02);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cta-text h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .cta-text p {
+            font-size: 13px;
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-call {
+            background: #22c55e;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #090d16;
+            padding: 30px 5% 20px 5%;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-bottom {
+            font-size: 12px;
+            color: #64748b;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        @media (min-width: 769px) {
+            header { padding: 20px 8%; }
+            .hero { flex-direction: row; text-align: left; justify-content: space-between; padding: 60px 8%; }
+            .hero-content { max-width: 550px; }
+            .features-list { justify-content: flex-start; }
+            .hero-btns { justify-content: flex-start; }
+            .hero-title { font-size: 44px; }
+            .services, .portfolio, footer { padding-left: 8%; padding-right: 8%; }
+            .stats-cta-bar { flex-direction: row; justify-content: space-between; padding: 40px 8%; }
+            .cta-content { flex-direction: row; justify-content: space-between; text-align: left; width: 100%; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-crown"></i>
+            <div>
+                <span class="logo-text">Jay Bajrang <span>Editz</span></span>
+                <span class="logo-subtitle">Edit • Design • Create</span>
+            </div>
+        </div>
+        <a onclick="openWhatsApp('Direct Contact')" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">Creative Editing & Design Services</span>
+            <h1 class="hero-title">Your Ideas,<br><span>Our Editing Magic</span></h1>
+            <p class="hero-desc">Photo Editing, Video Editing, Graphic Design aur bahut kuch... Sab kuch ek hi jagah, professional quality ke saath.</p>
+
+            <div class="features-list">
+                <span class="feature-item"><i class="fa-solid fa-bolt"></i> Fast Delivery</span>
+                <span class="feature-item"><i class="fa-solid fa-shield-halved"></i> 100% Quality</span>
+                <span class="feature-item"><i class="fa-solid fa-star"></i> Affordable Price</span>
+                <span class="feature-item"><i class="fa-solid fa-heart"></i> Customer Support</span>
+            </div>
+
+            <div class="hero-btns">
+                <a onclick="openWhatsApp('Order Now')" class="btn-primary">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+                <a onclick="scrollToSection('portfolio')" class="btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1542744094-3a31216994c4?auto=format&fit=crop&w=800&q=80" alt="Editing Mockup" class="mockup-img">
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <p class="section-tag">— Our Services —</p>
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">Har kaam ko hum passion ke saath karte hain. Aapka idea, hamari editing.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <div class="icon-box" style="background: #2563eb;"><i class="fa-regular fa-image"></i></div>
+                    <h3>Photo Editing</h3>
+                    <p>Background change, face retouch, color correction, cinematic look & more.</p>
+                </div>
+                <a onclick="openWhatsApp('Photo Editing')" class="know-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="icon-box" style="background: #7c3aed;"><i class="fa-solid fa-video"></i></div>
+                    <h3>Video Editing</h3>
+                    <p>Reels, YouTube, Shorts, wedding, travel, promotional videos & more.</p>
+                </div>
+                <a onclick="openWhatsApp('Video Editing')" class="know-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="icon-box" style="background: #db2777;"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Graphic Design</h3>
+                    <p>Posters, thumbnails, banners, logos, social media designs & more.</p>
+                </div>
+                <a onclick="openWhatsApp('Graphic Design')" class="know-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="icon-box" style="background: #059669;"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Website Design</h3>
+                    <p>Business website, portfolio, landing page, personal website & more.</p>
+                </div>
+                <a onclick="openWhatsApp('Website Design')" class="know-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="icon-box" style="background: #d97706;"><i class="fa-solid fa-paintbrush"></i></div>
+                    <h3>Logo Design</h3>
+                    <p>Modern, unique aur professional logos for your brand.</p>
+                </div>
+                <a onclick="openWhatsApp('Logo Design')" class="know-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <p class="section-tag">— Our Work —</p>
+        <h2 class="section-title">Latest Portfolio</h2>
+        <p class="section-subtitle">Kuch recent kaam jo humne apne clients ke liye kiye hain.</p>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" class="portfolio-img" alt="Photo Editing">
+                <div class="portfolio-info">
+                    <h4>Photo Editing</h4>
+                    <p>Background Change + Retouch</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=500&q=80" class="portfolio-img" alt="Video Editing">
+                <div class="portfolio-info">
+                    <h4>Video Editing</h4>
+                    <p>Cinematic Video</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80" class="portfolio-img" alt="Graphic Design">
+                <div class="portfolio-info">
+                    <h4>Graphic Design</h4>
+                    <p>YouTube Thumbnail</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" class="portfolio-img" alt="Website Design">
+                <div class="portfolio-info">
+                    <h4>Website Design</h4>
+                    <p>Business Website</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=500&q=80" class="portfolio-img" alt="Logo Design">
+                <div class="portfolio-info">
+                    <h4>Logo Design</h4>
+                    <p>Brand Logo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS & CTA BAR -->
+    <div class="stats-cta-bar" id="contact">
+        <div class="stats-group">
+            <div class="stat-item">
+                <i class="fa-regular fa-face-smile"></i>
+                <div>
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                <div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fa-regular fa-star"></i>
+                <div>
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Client Rating</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-content">
+            <div class="cta-text">
+                <h3>Ready to Work Together?</h3>
+                <p>Call / WhatsApp: +91 8302793819</p>
+            </div>
+            <div class="cta-btns">
+                <a onclick="makeCall()" class="btn-call">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+                <a onclick="openWhatsApp('Direct Contact')" class="btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            <i class="fa-solid fa-crown" style="color: #3b82f6;"></i>
+            <span style="font-weight: 700;">Jay Bajrang Editz</span>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Jay Bajrang Editz. Contact: 8302793819</p>
+            <p>Made with <i class="fa-solid fa-heart" style="color: red;"></i> for creators</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if(el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Fixed WhatsApp Redirect
+        function openWhatsApp(serviceName) {
+            const phone = "918302793819";
+            const msg = encodeURIComponent("Hello Jay Bajrang Editz, I want to inquire about: " + serviceName);
+            window.location.href = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + msg;
+        }
+
+        // Direct Call Dialing
+        function makeCall() {
+            window.location.href = "tel:8302793819";
+        }
+    </script>
+
+</body>
+</html>
